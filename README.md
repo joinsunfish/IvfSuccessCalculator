@@ -183,8 +183,19 @@ Consider a request with the following inputs:
 From the answers to first three questions, [CDC formula "1-3"](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html) (on the second row in the CSV) is selected. The calculation is then:
 
 `score` =\
- -6.8392144 + 0.3347309 ✕ 28 + -0.0003249 ✕ 28²·⁷⁶³³¹³ + 0.06997997 ✕ 22.8 ✕ -0.0015045 ✕ 22.8² + 0 + 0 + 0.02773216 + 0 + 0 + -0.1354896 + 0 + 0 + 0.03514055 + 0.03077479
-
-= -1.9976
+ -6.8392144 (intercept)\
+ \+ 0.3347309 ✕ 28 + -0.0003249 ✕ 28²·⁷⁶³³¹³ (age)\
+ \+ 0.06997997 ✕ 22.8 ✕ -0.0015045 ✕ 22.8² (bmi)\
+ \+ 0 (tubal factor)\
+ \+ 0 (male factor infertility)\
+ \+ 0.02773216 (endometriosis)\
+ \+ 0.27949598 (ovulatory disorder)\
+ \+ 0 (diminished ovarian reserve)\
+ \+ 0 (uterine factor)\
+ \+ 0 (other infertility reason)\
+ \+ 0 (unexplained infertility)\
+ \+ 0.03514055 (prior pregnancies)\
+ \+ 0.03077479 (prior live births)\
+= -1.9976\
 
 `success_rate` = e⁻¹·⁹⁹⁷⁶ / (1 + e⁻¹·⁹⁹⁷⁶) = 0.135657 / 1.135657 = 11.94%
