@@ -86,7 +86,7 @@ A 5'8" person weighing 150 lbs would have a BMI of approximately 22.8:
 - `user_height_in_ft` = 5
 - `user_height_in_inches` = 8
 
-5 \* 12 + 8 = 68\
+5 ✕ 12 + 8 = 68\
 68² = 4624\
 150 / 4624 ✕ 703 = 22.8
 
@@ -208,4 +208,4 @@ The response can come in the form of an HTML page, plain text, or some other use
 
 ## Submission
 
-Please create a public repository on GitHub (or your favorite Git hosting platform) and email the link to mpigott@joinsunfish.com.
+Please create a public repository on GitHub (or your favorite Git hosting platform) and email the link to mpigott@joinsunfish.com. The README should include how to run your code and instructions for how to create a request for calculating an IVF success rate, sending that request, and receiving the response.
