@@ -8,7 +8,7 @@ Calculating a patient's IVF success rate is an integral part of how we calculate
 
 The purpose of this exercise is to build a web server in the programming language of your choice that:
 
-1. Parses the provided `success_formulas.csv`
+1. Parses the provided `ivf_success_formulas.csv`
 2. Provides an HTTP endpoint which receives inputs to the formula
 3. Selects the correct formula to calculate the IVF success rate based on those inputs
 4. Performs the IVF success calculation based on the inputs
@@ -16,9 +16,9 @@ The purpose of this exercise is to build a web server in the programming languag
 
 The final implementation should produce the same results as the CDC's IVF Success Calculator linked above.
 
-## `success_formulas.csv`
+## `ivf_success_formulas.csv`
 
-The `success_formulas.csv` file contains 6 formulas for calculating the IVF success rate of a particular patient. The first three columns are parameters for choosing the correct formula, and their names are prefixed with `param_`.
+The `ivf_success_formulas.csv` file contains 6 formulas for calculating the IVF success rate of a particular patient. The first three columns are parameters for choosing the correct formula, and their names are prefixed with `param_`.
 
 The fourth column indicates which formula to choose among the [CDC Success Estimator formulas](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html). The values in the CSV are taken directly from the CDC's own formula tables; you are free to use the above page as a reference if you find it easier to read.
 
@@ -166,7 +166,7 @@ Consider a request with the following inputs:
 - Using Own Eggs: TRUE
 - Previously Attempted IVF: FALSE
 - Reason for Infertility Known: TRUE
-- Age: 28
+- Age: 32
 - Height: 5'8"
 - Weight: 150 lbs
 - Tubal Factor: FALSE
@@ -180,12 +180,12 @@ Consider a request with the following inputs:
 - Prior Pregnancies: 1
 - Prior Live Births: 1
 
-From the answers to first three questions, [CDC formula "1-3"](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html) (on the second row in the CSV) is selected. The calculation is then:
+From the answers to first three questions, select [CDC formula "1-3"](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html) (on the second row in the CSV). The calculation is then:
 
 `score` =\
  -6.8392144 (intercept)\
- \+ 0.3347309 ✕ 28 + -0.0003249 ✕ 28²·⁷⁶³³¹³ (age)\
- \+ 0.06997997 ✕ 22.8 ✕ -0.0015045 ✕ 22.8² (bmi)\
+ \+ 0.3347309 ✕ 32 + -0.0003249 ✕ 32²·⁷⁶³³¹³ (age)\
+ \+ 0.06997997 ✕ 22.8 + -0.0015045 ✕ 22.8² (bmi)\
  \+ 0 (tubal factor)\
  \+ 0 (male factor infertility)\
  \+ 0.02773216 (endometriosis)\
@@ -195,7 +195,17 @@ From the answers to first three questions, [CDC formula "1-3"](https://www.cdc.g
  \+ 0 (other infertility reason)\
  \+ 0 (unexplained infertility)\
  \+ 0.03514055 (prior pregnancies)\
- \+ 0.03077479 (prior live births)\
-= -1.9976\
+ \+ 0.15787934 (prior live births)\
+= 0.498270
 
-`success_rate` = e⁻¹·⁹⁹⁷⁶ / (1 + e⁻¹·⁹⁹⁷⁶) = 0.135657 / 1.135657 = 11.94%
+`success_rate` = e⁰·⁴⁹⁸²⁷⁰ / (1 + e⁰·⁴⁹⁸²⁷⁰) = 1.64587 / 2.64587 = 62.21%
+
+You can confirm this by going to the [IVF Success Calculator](https://www.cdc.gov/art/ivf-success-estimator/index.html) and see if you get the same results for the same inputs.
+
+## Response
+
+The response can come in the form of an HTML page, plain text, or some other user-understandable format.
+
+## Submission
+
+Please create a public repository on GitHub (or your favorite Git hosting platform) and email the link to mpigott@joinsunfish.com.
