@@ -86,8 +86,8 @@ A 5'8" person weighing 150 lbs would have a BMI of approximately 22.8:
 - `user_height_in_ft` = 5
 - `user_height_in_inches` = 8
 
-5 \* 12 + 8 = 68
-68² = 4624
+5 \* 12 + 8 = 68\
+68² = 4624\
 150 / 4624 ✕ 703 = 22.8
 
 ### IVF Success Formula
@@ -144,19 +144,19 @@ If the user selects either 0 or 1 prior pregnancies, use the corresponding coeff
 
 The overall formula is:
 
-`score` =
-`formula_intercept` +
-`formula_age_linear_component` ✕ `user_age` + `formula_age_power_coefficient` ✕ (`user_age` ^ `formula_age_power_factor`) +
-`formula_bmi_linear_coefficient` ✕ `user_bmi` + `formula_bmi_power_coefficient` ✕ (`user_bmi` ^ `formula_bmi_power_factor`) +
-`formula_tubal_factor_value` +
-`formula_male_factor_infertility_value` +
-`formula_endometriosis_value` +
-`formula_ovulator_disorder_value` +
-`formula_diminished_ovarian_reserve_value` +
-`formula_uterine_factor_value` +
-`formula_other_reason_value` +
-`formula_unexplained_infertility_value` +
-`formula_prior_pregnancies_value` +
+`score` =\
+ `formula_intercept` +\
+`formula_age_linear_component` ✕ `user_age` + `formula_age_power_coefficient` ✕ (`user_age` ^ `formula_age_power_factor`) +\
+`formula_bmi_linear_coefficient` ✕ `user_bmi` + `formula_bmi_power_coefficient` ✕ (`user_bmi` ^ `formula_bmi_power_factor`) +\
+`formula_tubal_factor_value` +\
+`formula_male_factor_infertility_value` +\
+`formula_endometriosis_value` +\
+`formula_ovulator_disorder_value` +\
+`formula_diminished_ovarian_reserve_value` +\
+`formula_uterine_factor_value` +\
+`formula_other_reason_value` +\
+`formula_unexplained_infertility_value` +\
+`formula_prior_pregnancies_value` +\
 `formula_live_births_value`
 
 #### Example
@@ -172,9 +172,9 @@ Consider a request with the following inputs:
 - Tubal Factor: FALSE
 - Male Factor Infertility: FALSE
 - Endometriosis: TRUE
-- Ovulatory Disorder: FALSE
+- Ovulatory Disorder: TRUE
 - Diminished Ovarian Reserve: FALSE
-- Uterine Factor: TRUE
+- Uterine Factor: FALSE
 - Other Infertilty Reason: FALSE
 - Unexplained Infertility: FALSE
 - Prior Pregnancies: 1
@@ -182,8 +182,8 @@ Consider a request with the following inputs:
 
 From the answers to first three questions, [CDC formula "1-3"](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html) (on the second row in the CSV) is selected. The calculation is then:
 
-`score` =
--6.8392144 + 0.3347309 ✕ 28 + -0.0003249 ✕ 28²·⁷⁶³³¹³ + 0.06997997 ✕ 22.8 ✕ -0.0015045 ✕ 22.8² + 0 + 0 + 0.02773216 + 0 + 0 + -0.1354896 + 0 + 0 + 0.03514055 + 0.03077479
+`score` =\
+ -6.8392144 + 0.3347309 ✕ 28 + -0.0003249 ✕ 28²·⁷⁶³³¹³ + 0.06997997 ✕ 22.8 ✕ -0.0015045 ✕ 22.8² + 0 + 0 + 0.02773216 + 0 + 0 + -0.1354896 + 0 + 0 + 0.03514055 + 0.03077479
 
 = -1.9976
 
