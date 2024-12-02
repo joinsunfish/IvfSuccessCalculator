@@ -159,7 +159,7 @@ The overall formula is:
 `formula_prior_pregnancies_value` +\
 `formula_live_births_value`
 
-#### Example
+#### Example: Using Own Eggs / Did Not Previously Attempt IVF / Known Infertility Reason
 
 Consider a request with the following inputs:
 
@@ -185,7 +185,7 @@ From the answers to first three questions, select [CDC formula "1-3"](https://ww
 `score` =\
  -6.8392144 (intercept)\
  \+ 0.3347309 ✕ 32 + -0.0003249 ✕ 32²·⁷⁶³³¹³ (age)\
- \+ 0.06997997 ✕ 22.8 + -0.0015045 ✕ 22.8² (bmi)\
+ \+ 0.06997997 ✕ 22.8 + -0.0015045 ✕ 22.8² (BMI)\
  \+ 0 (tubal factor)\
  \+ 0 (male factor infertility)\
  \+ 0.02773216 (endometriosis)\
@@ -201,6 +201,44 @@ From the answers to first three questions, select [CDC formula "1-3"](https://ww
 `success_rate` = e⁰·⁴⁹⁸²⁷⁰ / (1 + e⁰·⁴⁹⁸²⁷⁰) = 1.64587 / 2.64587 = 62.21%
 
 You can confirm this by going to the [IVF Success Calculator](https://www.cdc.gov/art/ivf-success-estimator/index.html) and see if you get the same results for the same inputs.
+
+#### Example: Using Own Eggs / Did Not Previously Attempt IVF / Unknown Infertility Reason
+
+- Using Own Eggs: TRUE
+- Previously Attempted IVF: FALSE
+- Reason for Infertility Known: FALSE
+- Age: 32
+- Height: 5'8"
+- Weight: 150 lbs
+- Tubal Factor: FALSE
+- Male Factor Infertility: FALSE
+- Endometriosis: FALSE
+- Ovulatory Disorder: FALSE
+- Diminished Ovarian Reserve: FALSE
+- Uterine Factor: FALSE
+- Other Infertilty Reason: FALSE
+- Unexplained Infertility: FALSE
+- Prior Pregnancies: 1
+- Prior Live Births: 1
+
+From the answers to first three questions, select [CDC formula "4-6"](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html) (on the third row in the CSV). The calculation is then:
+
+-7.5545223 (intercept)\
+\+ 0.37931798 ✕ 32 + -0.0003752 ✕ 32²·⁷⁶³³¹³ (age)\
+\+ 0.08057661 ✕ 22.8 + -0.0015304 ✕ 22.8² (BMI)\
+\+ 0 (tubal factor)\
+\+ 0 (male factor infertilty)\
+\+ 0 (endometriosis)\
+\+ 0 (ovulatory disorder)\
+\+ 0 (diminished ovarian reserve)\
+\+ 0 (uterine factor)\
+\+ 0 (other infertility reason)\
+\+ 0 (unexplained infertility reason)\
+\+ 0.02240271 (prior pregnancies)\
+\+ 0.16421628 (prior live births)\
+= 0.398540
+
+`success_rate` = e⁰·³⁹⁸⁵⁴⁰ / (1 + e⁰·³⁹⁸⁵⁴⁰) = 59.83%
 
 ## Response
 
