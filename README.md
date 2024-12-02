@@ -122,23 +122,27 @@ If the infertility reason is TRUE, use the `formula_*_true_value`. If FALSE, use
 
 _Note:_ In the [IVF Success Estimator formulas](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html), this parameter is called "Gravida"
 
-While the user can input any number greater than zero, the formula only has three coefficients:
+The formula only has three values:
 
 - A coefficient if the user has not had any prior pregnancies (`formula_prior_pregnancies_0_value`)
 - A coefficient if the user had exactly one prior pregnancy (`formula_prior_pregnancies_1_value`)
 - A coefficient if the user had two or more prior pregnancies (`formula_prior_pregnancies_2+_value`)
 
-If the user selects either 0 or 1 prior pregnancies, use the corresponding coefficient. If the user selects a number greater than or equal to two, use the third coefficient.
+You are free to either use radio buttons (or an enumeration field) for these three choices, or a text field asking the user to enter in a number.
+
+In the latter case, if the user selects either 0 or 1 prior pregnancies, use the corresponding value. If the user selects a number greater than or equal to two, use the third value.
 
 ### Live Births
 
-Similar to the Prior Pregnancies section above, while the user can input any number greater than zero, the formula only has three coefficients:
+Similar to the Prior Pregnancies section above, while the user can input any number greater than zero, the formula only has three values:
 
 - A coefficient if the user has not had any prior pregnancies (`formula_prior_live_births_0_value`)
 - A coefficient if the user had exactly one prior pregnancy (`formula_prior_live_births_1_value`)
 - A coefficient if the user had two or more prior pregnancies (`formula_prior_live_births_2+_value`)
 
-If the user selects either 0 or 1 prior pregnancies, use the corresponding coefficient. If the user selects a number greater than or equal to two, use the third coefficient.
+Again, you may either use a radio button / enumeration field or a text input.
+
+In the latter case, if the user selects either 0 or 1 live births, use the corresponding value. If the user selects a number greater than or equal to two, use the third value.
 
 ### Final Calculation
 
