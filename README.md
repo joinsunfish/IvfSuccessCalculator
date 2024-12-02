@@ -124,9 +124,9 @@ _Note:_ In the [IVF Success Estimator formulas](https://www.cdc.gov/art/ivf-succ
 
 The formula only has three values:
 
-- A coefficient if the user has not had any prior pregnancies (`formula_prior_pregnancies_0_value`)
-- A coefficient if the user had exactly one prior pregnancy (`formula_prior_pregnancies_1_value`)
-- A coefficient if the user had two or more prior pregnancies (`formula_prior_pregnancies_2+_value`)
+- A value if the user has not had any prior pregnancies (`formula_prior_pregnancies_0_value`)
+- A value if the user had exactly one prior pregnancy (`formula_prior_pregnancies_1_value`)
+- A value if the user had two or more prior pregnancies (`formula_prior_pregnancies_2+_value`)
 
 You are free to either use radio buttons (or an enumeration field) for these three choices, or a text field asking the user to enter in a number.
 
@@ -136,9 +136,9 @@ In the latter case, if the user selects either 0 or 1 prior pregnancies, use the
 
 Similar to the Prior Pregnancies section above, while the user can input any number greater than zero, the formula only has three values:
 
-- A coefficient if the user has not had any prior pregnancies (`formula_prior_live_births_0_value`)
-- A coefficient if the user had exactly one prior pregnancy (`formula_prior_live_births_1_value`)
-- A coefficient if the user had two or more prior pregnancies (`formula_prior_live_births_2+_value`)
+- A value if the user has not had any prior pregnancies (`formula_prior_live_births_0_value`)
+- A value if the user had exactly one prior pregnancy (`formula_prior_live_births_1_value`)
+- A value if the user had two or more prior pregnancies (`formula_prior_live_births_2+_value`)
 
 Again, you may either use a radio button / enumeration field or a text input.
 
