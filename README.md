@@ -35,7 +35,8 @@ The user needs to provide the following parameters in order to select the correc
 - Are they planning to use their own eggs in the IVF process?
   - TRUE: The patient is using their own eggs to create embryos.
   - FALSE: The patient will be leveraging a donor's eggs to create embryos.
-- Have they used IVF in the past? (TRUE or FALSE)
+- Have they used IVF in the past? (TRUE, FALSE, or N/A)
+  - If N/A, the answer to this question is not relevant in the formula selection. This is only N/A when the previous question is FALSE.
 - Do they know the reason for their own infertility? (TRUE or FALSE)
 
 ### Formula Calculation Parameters
