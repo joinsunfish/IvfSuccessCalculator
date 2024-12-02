@@ -223,6 +223,7 @@ You can confirm this by going to the [IVF Success Calculator](https://www.cdc.go
 
 From the answers to first three questions, select [CDC formula "4-6"](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html) (on the third row in the CSV). The calculation is then:
 
+`score` =\
 -7.5545223 (intercept)\
 \+ 0.37931798 ✕ 32 + -0.0003752 ✕ 32²·⁷⁶³³¹³ (age)\
 \+ 0.08057661 ✕ 22.8 + -0.0015304 ✕ 22.8² (BMI)\
@@ -239,6 +240,47 @@ From the answers to first three questions, select [CDC formula "4-6"](https://ww
 = 0.398540
 
 `success_rate` = e⁰·³⁹⁸⁵⁴⁰ / (1 + e⁰·³⁹⁸⁵⁴⁰) = 59.83%
+
+#### Example: Using Own Eggs / Previously Attempted IVF / Known Infertility Reason
+
+- Using Own Eggs: TRUE
+- Previously Attempted IVF: TRUE
+- Reason for Infertility Known: TRUE
+- Age: 32
+- Height: 5'8"
+- Weight: 150 lbs
+- Tubal Factor: TRUE
+- Male Factor Infertility: FALSE
+- Endometriosis: FALSE
+- Ovulatory Disorder: FALSE
+- Diminished Ovarian Reserve: TRUE
+- Uterine Factor: FALSE
+- Other Infertilty Reason: FALSE
+- Unexplained Infertility: FALSE
+- Prior Pregnancies: 1
+- Prior Live Births: 1
+
+From the answers to first three questions, select [CDC formula "7-8"](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html) (on the fourth row in the CSV). The calculation is then:
+
+`score` =\
+-8.102508 (intercept)
+\+ 0.37506646 ✕ 32 + -0.0003171 ✕ 32²·⁷⁸⁴⁶¹⁹ (age)
+\+ 0.04565965 ✕ 22.8 + -0.0008793 ✕ 22.8² (BMI)
+\+ 0.06858044 (tubal factor)
+\+ 0 (male factor inferility)
+\+ 0 (endometriosis)
+\+ 0 (ovulatory disorder)
+\+ -0.4806452 (diminished ovarian reserve)
+\+ 0 (uterine factor)
+\+ 0 (other inferility reason)
+\+ 0 (unexplained infertility)
+\+ 0.15884291
+\+ 0.32698183
+= -0.368348
+
+`success_rate` = e⁻⁰·³⁶⁸³⁴⁸ / (1 + e⁻⁰·³⁶⁸³⁴⁸) = 40.89%
+
+**Note**: If comparing to the [CDC IVF Success Calculator](https://www.cdc.gov/art/ivf-success-estimator/index.html), use "2" for the number of previous IVF cycles question.
 
 ## Response
 
