@@ -107,7 +107,7 @@ The `formula_intercept` is a constant added to the rest of the formula.
 
 Age is calculated with a linear component as well as a polynomial component:
 
-`formula_age_linear_component` ✕ `user_age` + `formula_age_power_coefficient` ✕ (`user_age` ^ `formula_age_power_factor`)
+`formula_age_linear_coefficient` ✕ `user_age` + `formula_age_power_coefficient` ✕ (`user_age` ^ `formula_age_power_factor`)
 
 ### BMI
 
