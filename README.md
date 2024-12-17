@@ -39,6 +39,8 @@ The user needs to provide the following parameters in order to select the correc
   - If N/A, the answer to this question is not relevant in the formula selection. This is only N/A when the previous question is FALSE.
 - Do they know the reason for their own infertility? (TRUE or FALSE)
 
+**Note:** When testing against the actual CDC IVF Success Calculator: the project and the CDC website offer different answers to the question "Have you attempted IVF previously?" In the project, the possible answers are either TRUE or FALSE, but on the CDC site, you can choose one of 0, 1, 2, or 3+. For testing your code against this form, choose "2" on the CDC site.
+
 ### Formula Calculation Parameters
 
 The user needs to provide the following parameters for the formula calculation:
