@@ -153,7 +153,7 @@ The overall formula is:
 
 `score` =\
  `formula_intercept` +\
-`formula_age_linear_component` ✕ `user_age` + `formula_age_power_coefficient` ✕ (`user_age` ^ `formula_age_power_factor`) +\
+`formula_age_linear_coefficient` ✕ `user_age` + `formula_age_power_coefficient` ✕ (`user_age` ^ `formula_age_power_factor`) +\
 `formula_bmi_linear_coefficient` ✕ `user_bmi` + `formula_bmi_power_coefficient` ✕ (`user_bmi` ^ `formula_bmi_power_factor`) +\
 `formula_tubal_factor_value` +\
 `formula_male_factor_infertility_value` +\
