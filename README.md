@@ -174,8 +174,7 @@ Consider a request with the following inputs:
 - Previously Attempted IVF: FALSE
 - Reason for Infertility Known: TRUE
 - Age: 32
-- Height: 5'8"
-- Weight: 150 lbs
+- BMI: 22.8
 - Tubal Factor: FALSE
 - Male Factor Infertility: FALSE
 - Endometriosis: TRUE
@@ -215,8 +214,7 @@ You can confirm this by going to the [IVF Success Calculator](https://www.cdc.go
 - Previously Attempted IVF: FALSE
 - Reason for Infertility Known: FALSE
 - Age: 32
-- Height: 5'8"
-- Weight: 150 lbs
+- BMI: 22.8
 - Tubal Factor: FALSE
 - Male Factor Infertility: FALSE
 - Endometriosis: FALSE
@@ -254,8 +252,7 @@ From the answers to first three questions, select [CDC formula "4-6"](https://ww
 - Previously Attempted IVF: TRUE
 - Reason for Infertility Known: TRUE
 - Age: 32
-- Height: 5'8"
-- Weight: 150 lbs
+- BMI: 22.8
 - Tubal Factor: TRUE
 - Male Factor Infertility: FALSE
 - Endometriosis: FALSE
