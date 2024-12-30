@@ -158,7 +158,7 @@ The overall formula is:
 `formula_tubal_factor_value` +\
 `formula_male_factor_infertility_value` +\
 `formula_endometriosis_value` +\
-`formula_ovulator_disorder_value` +\
+`formula_ovulatory_disorder_value` +\
 `formula_diminished_ovarian_reserve_value` +\
 `formula_uterine_factor_value` +\
 `formula_other_reason_value` +\
