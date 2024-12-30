@@ -164,7 +164,7 @@ The overall formula is:
 `formula_other_reason_value` +\
 `formula_unexplained_infertility_value` +\
 `formula_prior_pregnancies_value` +\
-`formula_live_births_value`
+`formula_prior_live_births_value`
 
 #### Example: Using Own Eggs / Did Not Previously Attempt IVF / Known Infertility Reason
 
