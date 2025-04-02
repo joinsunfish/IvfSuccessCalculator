@@ -9,10 +9,11 @@ Calculating a patient's IVF success rate is an integral part of how we calculate
 The purpose of this exercise is to build a web server in the programming language of your choice that:
 
 1. Parses the provided `ivf_success_formulas.csv`
-2. Provides an HTTP endpoint which receives inputs to the formula
-3. Selects the correct formula to calculate the IVF success rate based on those inputs
-4. Performs the IVF success calculation based on the inputs
-5. Responds with the IVF success rate back to the user
+2. Displays a web front-end that allows users to provide inputs to the formula
+3. Provides an HTTP endpoint which receives those inputs to the formula
+4. Selects the correct formula to calculate the IVF success rate based on those inputs
+5. Performs the IVF success calculation based on the inputs
+6. Responds with the IVF success rate back to the user
 
 The final implementation should produce the same results as the CDC's IVF Success Calculator linked above.
 
@@ -67,13 +68,11 @@ The user needs to provide the following parameters for the formula calculation:
 
 ### Receiving the input
 
-You have a few different choices for receiving the input:
+You have a few different ways to send the request from the front-end to the back-end:
 
 1. Via a POST request containing an HTML form
-2. As URL query parameters
+2. By redirecting to a new URL with the form inputs as query parameters
 3. Contained within a document in the format of your choice (JSON, XML, gRPC / Protobuf, ...)
-
-If using (1), please include the HTML page containing the form. If using (2) or (3), please provide sample inputs to demonstrate usage.
 
 ## Formula Calculations
 
@@ -288,8 +287,8 @@ From the answers to first three questions, select [CDC formula "7-8"](https://ww
 
 ## Response
 
-The response can come in the form of an HTML page, plain text, or some other user-understandable format.
+The web front-end should display the response in a user-friendly way. There are no requirements on how this is done - if the front-end posted a web form, the back-end can respond with the HTML containing the result. If you decided to create a Single-Page Application and leverage the server as an API, then do whatever makes sense for your SPA to display the result.
 
 ## Submission
 
-Please create a public repository on GitHub (or your favorite Git hosting platform) and email the link to mpigott@joinsunfish.com. The README should include how to run your code and instructions for how to create a request for calculating an IVF success rate, sending that request, and receiving the response.
+Please create a public repository on GitHub (or your favorite Git hosting platform) and email the link to mpigott@joinsunfish.com. The README should include how to run your code and instructions for how to launch the web server.
