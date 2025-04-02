@@ -287,7 +287,7 @@ From the answers to first three questions, select [CDC formula "7-8"](https://ww
 
 ## Response
 
-The web front-end should display the response in a user-friendly way. There are no requirements on how this is done - if the front-end posted a web form, the back-end can respond with the HTML containing the result. If you decided to create a Single-Page Application and leverage the server as an API, then do whatever makes sense for your SPA to display the result.
+The web front-end should display the response in a user-friendly way. There are no requirements on how this is done - if the front-end posted a web form or redirected to a new URL, the back-end can respond with the HTML containing the result. If you decided to create a Single-Page Application and leverage the server as an API, then do whatever makes sense for your SPA to display the result.
 
 ## Submission
 
