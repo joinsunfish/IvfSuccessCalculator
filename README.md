@@ -9,7 +9,7 @@ Calculating a patient's IVF success rate is an integral part of how we calculate
 The purpose of this exercise is to build a web server in the programming language of your choice that:
 
 1. Parses the provided `ivf_success_formulas.csv`
-2. Displays a web front-end that allows users to provide inputs to the formula
+2. Displays a web front-end, using a modern library, that allows users to provide inputs to the formula
 3. Provides an HTTP endpoint which receives those inputs to the formula
 4. Selects the correct formula to calculate the IVF success rate based on those inputs
 5. Performs the IVF success calculation based on the inputs
@@ -65,14 +65,6 @@ The user needs to provide the following parameters for the formula calculation:
   - _Note:_ In the [IVF Success Estimator formulas](https://www.cdc.gov/art/ivf-success-estimator/formulas_new.html), this parameter is called "Gravida"
 - Number of Live Births (0 or more)
   - The number of live births cannot exceed the number of prior pregnancies (even in the case of twins)
-
-### Receiving the input
-
-You have a few different ways to send the request from the front-end to the back-end:
-
-1. Via a POST request containing an HTML form
-2. By redirecting to a new URL with the form inputs as query parameters
-3. Contained within a document in the format of your choice (JSON, XML, gRPC / Protobuf, ...)
 
 ## Formula Calculations
 
@@ -284,10 +276,6 @@ From the answers to first three questions, select [CDC formula "7-8"](https://ww
 `success_rate` = e⁻⁰·³⁶⁸³⁴⁸ / (1 + e⁻⁰·³⁶⁸³⁴⁸) = 40.89%
 
 **Note**: If comparing to the [CDC IVF Success Calculator](https://www.cdc.gov/art/ivf-success-estimator/index.html), use "2" for the number of previous IVF cycles question.
-
-## Response
-
-The web front-end should display the response in a user-friendly way. There are no requirements on how this is done - if the front-end posted a web form or redirected to a new URL, the back-end can respond with the HTML containing the result. If you decided to create a Single-Page Application and leverage the server as an API, then do whatever makes sense for your SPA to display the result.
 
 ## Submission
 
