@@ -279,4 +279,4 @@ From the answers to first three questions, select [CDC formula "7-8"](https://ww
 
 ## Submission
 
-Please create a public repository on GitHub (or your favorite Git hosting platform) and email the link to mpigott@joinsunfish.com. The README should include how to run your code and instructions for how to launch the web server.
+Please create a public repository on GitHub (or your favorite Git hosting platform) and email the link to recruiting@joinsunfish.com. The README should include how to run your code and instructions for how to launch the web server.
